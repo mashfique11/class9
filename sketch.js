@@ -1,31 +1,40 @@
-var ball
-
-
+var box
 function setup() {
   createCanvas(400,400);
-  ball = createSprite(200,200,20,20)
+  background(51);
+  box = createSprite(200,200,30,30);
+
 }
 
 function draw() 
 {
-  background(30);
-  if(keyDown(RIGHT_ARROW)){
-    ball.x = ball.x+2
+
+  // write the code to change background color 
+  // to red when RIGHT_ARROW is pressed
+  if(keyIsDown(RIGHT_ARROW)){
+    background("red")
   }
-  if(keyDown(LEFT_ARROW)){
-    ball.x = ball.x-2
+  
+
+  if (keyIsDown(LEFT_ARROW)) 
+  {
+    background("blue");
+    
   }
-  if(keyDown(UP_ARROW)){
-    ball.y = ball.y-2
+ 
+    if (keyIsDown(UP_ARROW)) 
+  {
+    background("yellow");
+   
   }
-  if(keyDown(DOWN_ARROW)){
-    ball.y = ball.y+2
+
+  if (keyIsDown(DOWN_ARROW)) 
+  {
+    background("green");
   }
-  drawSprites()
 
 
+  
+  drawSprites();
 }
-
-
-
 
